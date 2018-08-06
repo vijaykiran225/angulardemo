@@ -1,3 +1,32 @@
-<p>
-  {{hero.realName}} works as {{hero.avengerName}}!
-</p>
+<div *ngIf="hero">
+
+ {{hero.realName}} works as {{hero.avengerName}}!
+
+<!-- <div>
+  <label>name:
+    <input [(ngModel)]="hero.realName" placeholder="name">
+  </label>
+</div>
+<div>
+  <label>Avenger name:
+    <input [(ngModel)]="hero.avengerName" placeholder="name">
+  </label>
+</div> -->
+
+</div>
+
+
+
+<h2>My Avengers in 2018</h2>
+<ul class="avengers2018">
+
+<li *ngFor="let anAvenger of avengers2018"
+ (click)="onSelect(anAvenger)">
+
+
+<div id="displayAvengers">
+<b>{{anAvenger.realName}} </b>
+</div>
+  </li>
+</ul>
+
