@@ -1,19 +1,14 @@
 
 
-<app-hero-detail [someAvenger]="hero"></app-hero-detail>
-
-
 
 
 <h2>My Avengers in 2018</h2>
 <ol class="avengers2018">
 
-<li *ngFor="let anAvenger of avengers2018"
-[class.selected]="hero === anAvenger"
- (click)="onSelect(anAvenger)">
-
+<li *ngFor="let anAvenger of avengers2018">
+<a routerLink="/detail/{{anAvenger.realName}}">
 <span class="badge">{{anAvenger.realName}}</span>
-
+</a>
 
   </li>
 </ol>
