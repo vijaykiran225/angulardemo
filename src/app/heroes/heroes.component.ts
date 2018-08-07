@@ -16,7 +16,7 @@ export class HeroesComponent implements OnInit {
   avengers2018 : Avenger[];
 
   getHeroes() : void{
-    this.avengers2018 =this.heroService.get2018Avengers();
+    this.heroService.get2018Avengers().subscribe(value => this.avengers2018=value);
   }
 
   ngOnInit() {
